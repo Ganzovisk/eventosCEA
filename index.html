@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Eventos 2026</title>
+
+<style>
+
+/* RESET */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#f4f6f9;
+    color:#333;
+}
+
+/* MENU */
+header{
+    background:#0a3d62;
+    color:white;
+    padding:15px 30px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+header h1{
+    font-size:22px;
+}
+
+/* HERO */
+.hero{
+    background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),
+    url("DJI_20260414114254_0002_D.jpg");
+    background-size:cover;
+    background-position:center;
+    height:300px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:white;
+    text-align:center;
+}
+
+.hero h2{
+    font-size:40px;
+}
+
+/* EVENTOS */
+.container{
+    padding:40px 20px;
+    max-width:1200px;
+    margin:auto;
+}
+
+.eventos{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:white;
+    border-radius:10px;
+    overflow:hidden;
+    box-shadow:0 4px 12px rgba(0,0,0,.1);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+.card img{
+    width:100%;
+    height:200px;
+    object-fit:cover;
+}
+
+.card-content{
+    padding:20px;
+}
+
+.card-content h3{
+    margin-bottom:10px;
+    color:#0a3d62;
+}
+
+.card-content p{
+    margin-bottom:15px;
+}
+
+/* BOTÕES */
+.botoes{
+    display:flex;
+    gap:20px;
+    margin-top:20px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    background:#0a3d62;
+    color:white;
+    padding:12px 20px;
+    border-radius:6px;
+    text-decoration:none;
+    display:inline-block;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:#07406b;
+}
+
+.inscrever{
+    background:#27ae60;
+}
+
+.inscrever:hover{
+    background:#1e874b;
+}
+
+/* FOOTER */
+footer{
+    background:#0a3d62;
+    color:white;
+    text-align:center;
+    padding:20px;
+    margin-top:40px;
+}
+
+/* RESPONSIVO */
+@media(max-width:600px){
+
+.hero h2{
+    font-size:28px;
+}
+
+header{
+    flex-direction:column;
+    gap:10px;
+}
+
+.botoes{
+    flex-direction:column;
+}
+
+.btn{
+    width:100%;
+    text-align:center;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>CEA - Companhia Energética Amazonense</h1>
+</header>
+
+<section class="hero">
+<h2>Eventos Imperdíveis 2026</h2>
+</section>
+
+<section class="container">
+
+<div class="eventos">
+
+<!-- EVENTO 1 -->
+<div class="card">
+<img src="OLC.webp">
+
+<div class="card-content">
+<h3>Ecoforest Adventure</h3>
+<p>Data: 16/05/2026</p>
+<p>Um passeio ecológico para família e amigos.</p>
+
+<div class="botoes">
+
+<a href="https://www.ecoforestadventure.com/"
+target="_blank"
+class="btn">
+Saiba Mais
+</a>
+
+<a href="https://docs.google.com/forms/d/e/1FAIpQLScdtxs-_C4cWQbOEliCJIq-lJscAwQmaERMgHyNr4FMHkXIHw/viewform?usp=publish-editor"
+class="btn inscrever">
+Inscreva-se
+</a>
+
+</div>
+</div>
+</div>
+
+<!-- EVENTO 2 -->
+<div class="card">
+<img src="tdc.png">
+
+<div class="card-content">
+<h3> Torneio de Dominó </h3>
+<p>Data: 06/06/2026</p>
+<p> Quem será o campeão?? </p>
+
+<div class="botoes">
+
+<a href="https://docs.google.com/forms/d/e/1FAIpQLScdtxs-_C4cWQbOEliCJIq-lJscAwQmaERMgHyNr4FMHkXIHw/viewform?usp=publish-editor" class="btn inscrever">Inscreva-se</a>
+</div>
+
+</div>
+</div>
+
+<!-- EVENTO 3 -->
+<div class="card">
+<img src="musa.webp">
+
+<div class="card-content">
+<h3> Visita ao MUSA </h3>
+<p>Data: 18/07/2026</p>
+<p>Momento de cultura e integração. </p>
+
+<div class="botoes">
+<a href="https://museudaamazonia.org.br/" class="btn">Saiba Mais</a>
+<a href="https://docs.google.com/forms/d/e/1FAIpQLScdtxs-_C4cWQbOEliCJIq-lJscAwQmaERMgHyNr4FMHkXIHw/viewform?usp=publish-editor" class="btn inscrever">Inscreva-se</a>
+</div>
+
+</div>
+</div>
+
+</div>
+
+</section>
+
+<footer>
+<p>Companhia Energética Amazonense</p>
+</footer>
+
+</body>
+</html>
