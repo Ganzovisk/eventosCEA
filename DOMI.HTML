@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Torneio de Dominó 2026 - CEA</title>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+body{
+  background:#f5f7fb;
+  color:#1d1d1d;
+  scroll-behavior:smooth;
+}
+
+/* SLIDER */
+.slider{
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:90vh;
+  overflow:hidden;
+  z-index:0;
+}
+
+.slide{
+  position:absolute;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  opacity:0;
+  transition:1s ease;
+}
+
+.slide.active{
+  opacity:1;
+}
+
+/* BOTÕES SLIDER */
+.btn{
+  position:absolute;
+  top:50%;
+  transform:translateY(-50%);
+  background:rgba(0,0,0,0.4);
+  color:white;
+  border:none;
+  font-size:30px;
+  padding:10px 15px;
+  cursor:pointer;
+  z-index:2;
+  border-radius:8px;
+}
+
+.btn:hover{
+  background:rgba(0,0,0,0.7);
+}
+
+.prev{ left:15px; }
+.next{ right:15px; }
+
+/* HERO */
+.hero{
+  height:90vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  color:white;
+  flex-direction:column;
+  padding:20px;
+  position:relative;
+  z-index:1;
+}
+
+.hero::before{
+  content:"";
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.35);
+  z-index:-1;
+}
+
+.hero h1{
+  font-size:48px;
+}
+
+.hero p{
+  margin-top:10px;
+  font-size:18px;
+}
+
+.hero button{
+  margin-top:25px;
+  margin:10px;
+  padding:12px 28px;
+  border:none;
+  border-radius:30px;
+  background:white;
+  color:#1F6FA3;
+  font-weight:bold;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.hero button:hover{
+  transform:scale(1.05);
+}
+
+/* CONTAINER */
+.container{
+  max-width:1100px;
+  margin:-50px auto 60px;
+  padding:20px;
+}
+
+/* CARD */
+.card{
+  background:white;
+  padding:30px;
+  border-radius:16px;
+  margin-bottom:20px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.08);
+}
+
+h2{
+  color:#1F6FA3;
+  margin-bottom:15px;
+  border-left:4px solid #1F6FA3;
+  padding-left:10px;
+  font-size:20px;
+}
+
+p{
+  line-height:1.7;
+  font-size:15px;
+  white-space:pre-line;
+}
+
+ul{
+  padding-left:20px;
+  line-height:1.8;
+}
+
+footer{
+  text-align:center;
+  padding:30px;
+  font-size:13px;
+  color:#777;
+}
+</style>
+
+</head>
+
+<body>
+
+<!-- SLIDER -->
+<div class="slider">
+
+  <img src="1.jpg" class="slide active">
+  <img src="2.JPG" class="slide">
+  <img src="3.JPG" class="slide">
+
+  <button class="btn prev" onclick="mudarSlide(-1)">&#10094;</button>
+  <button class="btn next" onclick="mudarSlide(1)">&#10095;</button>
+
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <h1>TORNEIO DE DOMINÓ 2026</h1>
+  <p>CEA - Companhia Energética Amazonense</p>
+
+  <button onclick="document.getElementById('conteudo').scrollIntoView({behavior:'smooth'})">
+    Ver Regulamento
+  </button>
+
+  <button onclick="window.location.href='index.html'">
+    Voltar
+  </button>
+</section>
+
+<br><br><br><br><br><br>
+
+<!-- CONTEÚDO -->
+<div class="container" id="conteudo">
+
+  <div class="card">
+    <h2>1. APRESENTAÇÃO</h2>
+    <p>
+A CEA (Companhia Energética Amazonense) torna público aos empregados do Grupo que será realizado o TORNEIO DE DOMINÓ no dia 06/06/2026, em local e horário a serem definidos. As inscrições deverão ser realizadas por meio do link: 
+<br>
+<a href="https://ganzovisk.github.io/eventosCEA/" target="_blank" style="color:#1F6FA3; text-decoration:none; font-weight:bold;">
+  Eventos 2026
+</a>    
+    </p>
+  </div>
+
+  <div class="card">
+    <h2>2. CONDIÇÕES PARA PARTICIPAR</h2>
+    <p>
+A participação estará aberta para qualquer empregado do GRUPO Global (O&M) e CEA, realizando a sua inscrição até o dia 01/06/2026.
+    </p>
+  </div>
+
+  <div class="card">
+    <h2>3. COMISSÃO DE ORGANIZAÇÃO E ARBITRAGEM</h2>
+    <p>
+A comissão será composta por:
+Jordan Everton – Global Engenharia O&M
+    </p>
+  </div>
+
+  <div class="card">
+    <h2>4. DISPOSIÇÕES FINAIS</h2>
+    <p>
+4.1 – O não cumprimento de quaisquer das regras deste regulamento e ANEXO I - REGRAS poderá causar, a critério da comissão organizadora, a desclassificação do participante.
+
+4.2 - O ato da inscrição neste torneio implica na aceitação de todos os itens deste regulamento.
+    </p>
+  </div>
+
+  <div class="card">
+    <h2>ANEXO I – REGRAS DO TORNEIO</h2>
+    <p>
+i. O jogo de dominó possui vinte e oito pedras, divididas igualmente entre as duplas, de forma que cada jogador inicie a partida com sete pedras. Após distribuição todos competidores deverão posicionar as mãos abaixo da mesa, a fim de evitar visualização das pedras. O não cumprimento poderá resultar em punições.
+
+ii. O início do jogo se dará pelo jogador que estiver com a pedra dupla de “1”, conhecida como bucha de ÁS.
+
+iii. O jogador que não tiver pedra compatível para jogar no seu turno deverá bater na mesa para informar o fato. O fiscal confirmará a situação e dará prosseguimento ao jogo. Caso o competidor realize uma falsa sinalização, será considerado “passado com pedra da mão” resultando na imediata vitória da dupla adversária com o acréscimo de 1 (uma) peça em sua pontuação.
+
+iv. O torneio será regido pelo sistema de pontos ganhos, observando-se os seguintes critérios de vitória PARCIAL:
+
+• 1 (uma) peça → (carroça, “buchada”, dobrada, feche ou 3 batidas simples).  
+• Batida simples → (incluindo feche pelas pontas): representa uma vitória simples. Uma batida valem 3 pontos, duas batidas valem 5 pontos e três batidas correspondem a uma peça.
+
+v. Caso ocorra impossibilidade de inserir novas pedras (jogo fechado), será considerado ganhador a dupla cujo jogador possua a menor pontuação das pedras em comparação com seus adversários. Dessa forma, a pontuação do parceiro da dupla será desconsiderada. Se o competidor que provocar o fechamento do jogo estiver com pontuação maior ou igual aos outros, a dupla adversária será declarada vencedora e somará 2 (duas) peças.
+
+vi. Não serão permitidas conversas entre os participantes. Caso seja necessário, o jogador deverá solicitar a interferência do fiscal. Questões não descritas nas regras serão decididas pela comissão organizadora, seguindo as práticas e costumes locais.
+
+vii. As duplas e os respectivos adversários serão definidos no local, por meio de sorteio aleatório.
+
+PUNIÇÕES:
+
+viii. O tempo de jogada por participante será de 30 segundos. Em caso de descumprimento do tempo proposto, a dupla poderá ser punida com a perda de 3 pontos.
+
+CRITÉRIO DE VITÓRIA DO JOGO:
+
+viii. Aquele que completar 5 (cinco) peças ou a dupla que mais pontuar em 10 min será considerada vencedora.
+    </p>
+  </div>
+
+</div>
+
+<footer>
+  © 2026 CEA - Torneio de Dominó | Evento Oficial
+</footer>
+
+<script>
+let index = 0;
+const slides = document.querySelectorAll(".slide");
+
+function mudarSlide(n){
+  index += n;
+  if(index >= slides.length) index = 0;
+  if(index < 0) index = slides.length - 1;
+
+  slides.forEach(s => s.classList.remove("active"));
+  slides[index].classList.add("active");
+}
+
+setInterval(()=>mudarSlide(1),5000);
+</script>
+
+</body>
+</html>
